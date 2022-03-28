@@ -6,17 +6,22 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon --inspect src/index.js localhost 3000",
-    "watch": "node-sass --watch src/resources/scss/ --output src/public/css"
+    "watch": "node-sass --watch src/resources/scss/ --output src/public/css",
+    "beautiful": "prettier --single-quote --trailing-comma all --write 'src/**/*.{js, json, scss}'"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.3",
-    "express-handlebars": "^6.0.3"
+    "express-handlebars": "^6.0.3",
+    "mongoose": "^6.2.8"
   },
   "devDependencies": {
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.7",
     "morgan": "^1.10.0",
     "node-sass": "^7.0.1",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "prettier": "^2.6.1"
   }
 }

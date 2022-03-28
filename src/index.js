@@ -2,10 +2,13 @@ const path = require("path");
 const express = require("express");
 const morgan = require("morgan");
 const { engine } = require("express-handlebars");
-const route = require("./routers");
 const app = express();
 const port = 3000;
 
+const route = require("./routers");
+const db = require("./config/db");
+db.connect();
+// Connect to DB
 // Static file
 app.use(express.static(path.join(__dirname, "public")));
 // HTTP logger
