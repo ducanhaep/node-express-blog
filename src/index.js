@@ -29,6 +29,10 @@ app.get("/news", (req, res) => {
 });
 // 127.0.0.1 - localhost
 
+app.get("/search", (req, res) => {
+  res.render("search");
+});
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
